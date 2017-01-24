@@ -1,7 +1,14 @@
-<h1> All Contacts </h1>
-
-<ul>
-<%= Contact.all.each do |contact| %>
-  <l1><%= contact.first_name %> <%= contact.last_name %></li>
-<% end %>
-</ul>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1> All Contacts </h1>
+      <ul>
+        <% Contact.all.each do |contact| %>
+        <li><%= contact.full_name %></li>
+    <% end %>
+      </ul>
+  </body>
+</html>
