@@ -1,3 +1,10 @@
+gem "activerecord", "= 4.2.7"
+require "active_record"
+require "mini_record"
+
+ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: 'crm-web.sqlite3')
+
+
 # Copy your entire Contact class from the old crm assignment here.
 # Then, run the following at the command line:
 #
