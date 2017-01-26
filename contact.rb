@@ -19,7 +19,7 @@ class Contact < ActiveRecord::Base
   field :note, as: :text
 
   def full_name
-    "#{@first_name} #{@last_name}"
+    "#{first_name} #{last_name}"
   end
 
 end
@@ -58,11 +58,7 @@ Contact.auto_upgrade!
   # This method should accept an id as an argument
   # and return the contact who has that id
   # def self.find(id)
-  #   @@contacts.each do |contact|
-  #     if id == contact.id
-  #       return contact
-  #     end
-  #   end
+  #   @@contacts.find{ |contact| contact.id == id}
   # end
 
   # This method should allow you to specify

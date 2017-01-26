@@ -11,7 +11,13 @@
   <ul class="contact_list">
     <% Contact.all.each do |contact| %>
       <li class="list_of_c"><p><%= contact.full_name %> (<%= contact.email %>) </p>
-        <p><a href="#" class="edit_delete">Edit</a><span class="bar"> | </span><a href="#" class="edit_delete">Delete</a></p>
+        <p>
+          <a href="/contacts/<%= contact.id %>/view" class="view_edit_delete">View</a>
+          <span class="bar"> | </span>
+          <a href="/contacts/<%= contact.id %>/edit" class="view_edit_delete">Edit</a>
+          <span class="bar"> | </span>
+          <a href="/contacts/<%= contact.id %>/delete" class="view_edit_delete">Delete</a>
+        </p>
       </li>
         <!-- <li class="edit_delete"><a href="#">Edit</a> | <a href="#">Delete</a> -->
     <% end %>

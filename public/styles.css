@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  height: 100%;
 }
 
 /*------------contacts.erb---------------*/
@@ -72,7 +73,7 @@ span.contact_count {
   background: cyan;
 }
 
-.edit_delete {
+.view_edit_delete {
   font-weight: lighter;
   color: blue;
   font-size: 13px;
