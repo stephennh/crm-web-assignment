@@ -5,12 +5,28 @@
   </head>
   <body>
     <h1> Create new Contact </h1>
-      <form action="/contacts" method="post">
-        <input type="text" name="first_name">
-        <input type="text" name="last_name">
-        <input type="text" name="email">
-        <input type="text" name="note">
-        <input type="Submit" name="New Contact">
-      </form>
+    <div class="input_form">
+      <ul>
+        <form action="/contacts" method="post">
+        <li>
+          <label for"first_name">First Name:</label>
+          <input type="text" name="first_name" placeholder="First Name">
+        </li>
+        <li>
+          <label for"last_name">Last Name:</label>
+          <input type="text" name="last_name" placeholder="Last Name">
+        </li>
+        <li>
+          <label for"email">Email:</label>
+          <input type="text" name="email" placeholder="Email">
+        </li>
+        <li>
+          <label for"note">Note:</label>
+          <input type="text" name="note" placeholder="Note">
+        </li>
+          <input type="Submit" name="New Contact">
+        </form>
+      </ul>
+    </div>
   </body>
 </html>

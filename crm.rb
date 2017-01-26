@@ -15,10 +15,13 @@ get "/" do
 end
 
 get "/contacts" do
+  @count = Contact.all.count
+  #links to contacts.erb file
   return erb(:contacts)
 end
 
 get "/contacts/new" do
+  #links to new_contact.erb
   return erb(:new_contact)
 end
 

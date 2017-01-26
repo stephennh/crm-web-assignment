@@ -1,14 +1,18 @@
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1> All Contacts </h1>
-      <ul>
-        <% Contact.all.each do |contact| %>
-        <li><%= contact.full_name %></li>
+<!-- <h1 class="title_contact"> Stephen's CRM </h1>
+  <ul class="links">
+    <a href="/" class="top_links"> Home </a>
+    <a href="/contacts/new" class="top_links"> Add a Contact </a>
+    <a href="#" class="top_links"> About </a>
+  </ul> -->
+  <div>
+    <!-- <% @count = Contact.all.count %> -->
+    <p class="number_contact"> There are <span class="contact_count"><%= @count %></span> contacts </p>
+  </div>
+  <ul class="contact_list">
+    <% Contact.all.each do |contact| %>
+      <li class="list_of_c"><p><%= contact.full_name %> (<%= contact.email %>) </p>
+        <p><a href="#" class="edit_delete">Edit</a><span class="bar"> | </span><a href="#" class="edit_delete">Delete</a></p>
+      </li>
+        <!-- <li class="edit_delete"><a href="#">Edit</a> | <a href="#">Delete</a> -->
     <% end %>
-      </ul>
-  </body>
-</html>
+  </ul>

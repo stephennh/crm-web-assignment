@@ -90,6 +90,10 @@ class Contact
     "#{@first_name} #{@last_name}"
   end
 
+  def email
+    "#{@email}"
+  end
+
   # This method should delete the contact
   # HINT: Check the Array class docs for built-in methods that might be useful here
   def delete
