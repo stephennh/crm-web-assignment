@@ -1,6 +1,9 @@
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
-  height: 100%;
 }
 
 /*------------contacts.erb---------------*/
@@ -85,6 +88,7 @@ span.contact_count {
 }
 
 p.footer {
+  position: absolute;
   background-color: black;
   color: white;
   font-weight: lighter;
@@ -93,7 +97,6 @@ p.footer {
   margin: 0;
   height: 40px;
   line-height: 40px;
-  position: sticky;;
   bottom: 0;
   width: 100%
 }
