@@ -22,6 +22,10 @@ class Contact < ActiveRecord::Base
     "#{@first_name} #{@last_name}"
   end
 
+end
+
+Contact.auto_upgrade!
+
   # attr_reader :id
   # attr_accessor :first_name, :last_name, :email, :note
 
@@ -117,4 +121,4 @@ class Contact < ActiveRecord::Base
   # end
 
   # Feel free to add other methods here, if you need them.
-end
+# end
