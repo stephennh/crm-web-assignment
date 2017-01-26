@@ -11,7 +11,7 @@ ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: 'crm-web.s
 #   ruby test/contact_test.rb
 #
 # If your implementation of the Contact class is 'right', then you should see that all tests pass!
-class Contact
+class Contact < ActiveRecord::Base
 
   # attr_reader :id
   # attr_accessor :first_name, :last_name, :email, :note
