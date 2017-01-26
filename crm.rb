@@ -31,3 +31,7 @@ post "/contacts" do
   # redirects you back to /contacts page
   redirect to ("/contacts")
 end
+
+after do
+  ActiveRecord::Base.connection.close
+end
