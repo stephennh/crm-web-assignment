@@ -13,6 +13,15 @@ ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: 'crm-web.s
 # If your implementation of the Contact class is 'right', then you should see that all tests pass!
 class Contact < ActiveRecord::Base
 
+  field :first_name, as: :string
+  field :last_name, as: :string
+  field :email, as: :string
+  field :note, as: :text
+
+  def full_name
+    "#{@first_name} #{@last_name}"
+  end
+
   # attr_reader :id
   # attr_accessor :first_name, :last_name, :email, :note
 
@@ -93,9 +102,9 @@ class Contact < ActiveRecord::Base
   #   @@contacts = []
   # end
 
-  def full_name
-    "#{@first_name} #{@last_name}"
-  end
+  # def full_name
+  #   "#{@first_name} #{@last_name}"
+  # end
 
   # def email
   #   "#{@email}"
